@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-devanagari {
+    font-family: 'Noto Sans Devanagari', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  .font-rozha {
+    font-family: 'Rozha One', 'Noto Sans Devanagari', serif;
+  }
+  .font-yatra {
+    font-family: 'Yatra One', 'Noto Sans Devanagari', cursive;
+  }
+  .font-outfit {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Custom patterned borders for traditional Indian receipt / bill-book */
+.border-double-thick {
+  border-style: double;
+  border-width: 5px;
+}
+
+.border-dashed-fine {
+  border-bottom: 1.5px dashed currentColor;
+}
+
+.dotted-line {
+  border-bottom: 1.5px dotted #94a3b8;
+}
+
+/* Print styling */
+@media print {
+  /* Hide all non-printable elements */
+  header, footer, nav, .no-print, .modal-backdrop {
+    display: none !important;
+  }
+
+  body, html, #root {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  /* Make sure printable wrapper takes full width with no grey shadow */
+  .printable-wrapper {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .print-area {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    display: block !important;
+  }
+
+  .bill-container {
+    box-shadow: none !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    page-break-inside: avoid !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  th, td {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: auto;
+    margin: 5mm;
+  }
+}

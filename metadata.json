@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix RDS STUDIO Mixing Point - बिल बुक एवं बुकिंग पर्ची",
+  "description": "वीडियोग्राफी एवं फोटोग्राफी स्टूडियो के लिए पेशेवर बिल बुक, बुकिंग रसीद व कोटेशन जेनरेटर (प्रिंट, व्हाट्सएप शेयर व रिकॉर्ड प्रबंधन)।",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
